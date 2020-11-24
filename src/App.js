@@ -14,9 +14,16 @@ import {
   View,
   Text,
   StatusBar,
+  Platform,
+  Alert,
 } from 'react-native';
 
 const App: () => React$Node = () => {
+  if (Platform.OS) Alert.alert(Platform.OS);
+  else {
+    console.log('web');
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />

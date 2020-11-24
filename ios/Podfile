@@ -8,6 +8,8 @@ target 'ReactNativeWebApp' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNAudioRecord', :path => '../node_modules/react-native-audio-record'
+
   target 'ReactNativeWebAppTests' do
     inherit! :complete
     # Pods for testing
